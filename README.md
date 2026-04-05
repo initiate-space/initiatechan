@@ -1,3 +1,8 @@
+If we could convert database to use sqlite that would be awesome.
+Things to do: css, fetch auth from backend for posting, VPN blocking.
+Rest can be done in production.
+-Ahiga
+
 **In Memory of Fredrick Brennan (1994-2026).**
 
 vichan - A lightweight and full featured PHP imageboard.
