@@ -39,6 +39,30 @@ function md5_hash_of_file($config, $path) {
 	}
 }
 
+
+
+/**
+ * Verify the poster is authenticated with the Initiate backend.
+ *
+ * Reads the auth_token and verifies it against the Rust backend
+ * either via a server-to-server cURL call or WS or something else... Returns the user array on success,
+ * calls error() and exits on any failure.
+ *
+ * a WS approach would avoid polling entirely
+ * backend could push session invalidations to vichan in real time. But
+ * a simple curl call per post is good enough and way much
+ * simpler to maintain. Revisit this please.
+ *
+ * @return array Authenticated user data from the Rust backend.
+ * error() to You need to be logged in to post.
+ * Also do not forget to hide the "name" field. It should be disabled completely, 
+ * we can just inject the usernumber or username in there.
+ * -Ahiga
+ */
+
+
+
+
 /**
  * Strip the symbols incompatible with the current database version.
  *
